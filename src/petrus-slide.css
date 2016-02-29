@@ -1,0 +1,193 @@
+@charset "UTF-8";
+
+*{margin: 0px; padding: 0px;}
+
+/*html, body{ height: 100%; width: 100%; }*/
+
+.petrus-slide-container { position: relative; overflow: hidden; }
+
+.petrus-slide-container .petrus-slide-page { height: 100%; width: 100%; position: absolute; }
+
+.petrus-slide-table{ width: 100%; height: 100%; display: table; }
+
+.petrus-slide-table-cell{ width: 100%; height: 100%; display: table-cell; vertical-align: middle;
+	text-align: center; }
+
+.petrus-slide-hide { display: none; }
+
+/********* 向上翻动帧动画 Start *****************/
+@keyframes default-up{
+	0%{ top: 100%; }
+	100%{ top: 0; }
+}
+@-webkit-keyframes default-up{
+	0%{ top: 100%; }
+	100%{ top: 0; }
+}
+@-o-keyframes default-up{
+	0%{ top: 100%; }
+	100%{ top: 0; }
+}
+@-moz-keyframes default-up{
+	0%{ top: 100%; }
+	100%{ top: 0; }
+}
+
+@keyframes default-up-hide{
+	0%{ top: 0; }
+	100%{ top: -100%; }
+}
+@-webkit-keyframes default-up-hide{
+	0%{ top: 0; }
+	100%{ top: -100%; }
+}
+@-o-keyframes default-up-hide{
+	0%{ top: 0; }
+	100%{ top: -100%; }
+}
+@-moz-keyframes default-up-hide{
+	0%{ top: 0; }
+	100%{ top: -100%; }
+}
+/********* 向上翻动帧动画 End *****************/
+
+/********* 向下翻动帧动画 Start *****************/
+@keyframes default-down{
+	0%{ top: -100%; }
+	100%{ top: 0; }
+}
+@-webkit-keyframes default-down{
+	0%{ top: -100%; }
+	100%{ top: 0; }
+}
+@-o-keyframes default-down{
+	0%{ top: -100%; }
+	100%{ top: 0; }
+}
+@-moz-keyframes default-down{
+	0%{ top: -100%; }
+	100%{ top: 0; }
+}
+
+@keyframes default-down-hide{
+	0%{ top: 0; }
+	100%{ top: 100%; }
+}
+@-webkit-keyframes default-down-hide{
+	0%{ top: 0; }
+	100%{ top: 100%; }
+}
+@-o-keyframes default-down-hide{
+	0%{ top: 0; }
+	100%{ top: 100%; }
+}
+@-moz-keyframes default-down-hide{
+	0%{ top: 0; }
+	100%{ top: 0%; }
+}
+/********* 向下翻动帧动画 End *****************/
+
+
+/********* Slide default Start *****************/
+.petrus-slide-anim-up-default { animation: default-up 0.8s; -moz-animation: default-up 0.8s; 
+	-webkit-animation: default-up 0.8s; -o-animation: default-up 0.8s; top: 0; }
+.petrus-slide-anim-up-hide-default { animation: default-up-hide 0.8s; -moz-animation: default-up-hide 0.8s; 
+	-webkit-animation: default-up-hide 0.8s; -o-animation: default-up-hide 0.8s; top: -100%; }
+.petrus-slide-anim-down-default { animation: default-down 0.8s; -moz-animation: default-down 0.8s; 
+	-webkit-animation: default-down 0.8s; -o-animation: default-down 0.8s; top: 0; }
+.petrus-slide-anim-down-hide-default { animation: default-down-hide 0.8s; -moz-animation: default-down-hide 0.8s; 
+	-webkit-animation: default-down-hide 0.8s; -o-animation: default-down-hide 0.8s; top: 100%; }
+/********* Slide default end *****************/
+
+/********* Slide track Start *****************/
+.petrus-slide-anim-up-track { animation: default-up 0.8s ease; -moz-animation: default-up 0.8s ease; 
+	-webkit-animation: default-up 0.8s ease; -o-animation: default-up 0.8s ease; top: 0; }
+.petrus-slide-anim-up-hide-track { animation: default-up-hide 1.4s linear; -moz-animation: default-up-hide 1.4s linear; 
+	-webkit-animation: default-up-hide 1.4s linear; -o-animation: default-up-hide 1.4s linear; top: -100%; }
+.petrus-slide-anim-down-track { animation: default-down 0.8s ease; -moz-animation: default-down 0.8s ease; 
+	-webkit-animation: default-down 0.8s ease; -o-animation: default-down 1s ease; top: 0; }
+.petrus-slide-anim-down-hide-track { animation: default-down-hide 1.4s linear; -moz-animation: default-down-hide 1.4s linear; 
+	-webkit-animation: default-down-hide 1.4s linear; -o-animation: default-down-hide 1.4s linear; top: 100%; }
+/********* Slide track end *****************/
+
+/********* 覆盖隐藏帧动画 Start *****************/
+@keyframes cover-hide{
+	0%{ top: 0%; }
+	100%{ top: 0%; }
+}
+@-webkit-keyframes cover-hide{
+	0%{ top: 0%; }
+	100%{ top: 0%; };
+}
+@-o-keyframes cover-hide{
+	0%{ top: 0%; }
+	100%{ top: 0%; }
+}
+@-moz-keyframes cover-hide{
+	0%{ top: 0%; }
+	100%{ top: 0%; }
+}
+/********* 覆盖隐藏帧动画 End *****************/
+
+/********* Slide cover Start *****************/
+.petrus-slide-anim-up-cover { animation: default-up 0.8s ease-in; -moz-animation: default-up 0.8s ease-in; 
+	-webkit-animation: default-up 0.8s ease-in; -o-animation: default-up 0.8s ease-in; top: 0; }
+.petrus-slide-anim-up-hide-cover { animation: cover-hide 0.8s linear; -moz-animation: cover-hide 0.8s linear;
+	-webkit-animation: cover-hide 0.8s linear; -o-animation: cover-hide 0.8s linear; top: -100%; }
+.petrus-slide-anim-down-cover { animation: default-down 0.8s ease-in; -moz-animation: default-down 0.8s ease-in; 
+	-webkit-animation: default-down 0.8s ease-in; -o-animation: default-down 1s ease-in; top: 0; }
+.petrus-slide-anim-down-hide-cover { animation: cover-hide 0.8s linear; -moz-animation: cover-hide 0.8s linear; 
+	-webkit-animation: cover-hide 0.8s linear; -o-animation: cover-hide 0.8s linear; top: -100%; }
+/********* Slide cover end *****************/
+
+
+/********* 渐隐渐现帧动画 Start *****************/
+@keyframes fade-show{
+	0%{ display: block; opacity: 0; }
+	100%{ opacity: 1; display: block; }
+}
+@-webkit-keyframes fade-show{
+	0%{ display: block; opacity: 0; }
+	100%{ opacity: 1; display: block; }
+}
+@-o-keyframes fade-show{
+	0%{ display: block; opacity: 0; }
+	100%{ opacity: 1; display: block; }
+}
+@-moz-keyframes fade-show{
+	0%{ display: block; opacity: 0; }
+	100%{ opacity: 1; display: block; }
+}
+
+@keyframes fade-hide{
+	0%{ top: opacity: 1; display: block; }
+	99%{ top: opacity: 0; display: block; }
+	100%{ display: hidden; opacity: 0; }
+}
+@-webkit-keyframes fade-hide{
+	0%{ top: opacity: 1; display: block; }
+	99%{ top: opacity: 0; display: block; }
+	100%{ display: hidden; opacity: 0; }
+}
+@-o-keyframes fade-hide{
+	0%{ top: opacity: 1; display: block; }
+	99%{ top: opacity: 0; display: block; }
+	100%{ display: hidden; opacity: 0; }
+}
+@-moz-keyframes fade-hide{
+	0%{ top: opacity: 1; display: block; }
+	99%{ top: opacity: 0; display: block; }
+	100%{ display: hidden; }
+}
+/********* 渐隐渐现帧动画 End *****************/
+
+/********* Slide fade Start *****************/
+.petrus-slide-anim-up-fade { animation: fade-show 0.8s ease-in; -moz-animation: fade-show 0.8s ease-in; 
+	-webkit-animation: fade-show 0.8s ease-in; -o-animation: fade-show 0.8s ease-in; display: block; top: 0; }
+.petrus-slide-anim-up-hide-fade { animation: fade-hide 0.8s ease-out; -moz-animation: fade-hide 0.8s ease-out; 
+	-webkit-animation: fade-hide 0.8s ease-out; -o-animation: fade-hide 0.8s ease-out; display: hidden; top: 0; }
+.petrus-slide-anim-down-fade { animation: fade-show 0.8s ease-in; -moz-animation: fade-show 0.8s ease-in; 
+	-webkit-animation: fade-show 0.8s ease-in; -o-animation: fade-show 1s ease-in; display: block; top: 0; }
+.petrus-slide-anim-down-hide-fade { animation: fade-hide 0.8s ease-out; -moz-animation: fade-hide 0.8s ease-out; 
+	-webkit-animation: fadehide 0.8s ease-out; -o-animation: fad-hide 0.8s ease-out; display: hidden; top: 0; }
+/********* Slide fade end *****************/

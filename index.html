@@ -1,0 +1,70 @@
+<html><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Examples</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link href="src/petrus-slide.css" rel="stylesheet">
+
+	<style type="text/css">
+
+	*{ margin: 0; padding: 0; color: white; font-size: 32px; font-weight: bold; }
+	.p1{ background: rgb(255, 87, 99); }
+	.p2{ background: rgb(11, 0, 22); }
+	.p3{ background: rgb(22, 89, 189); }
+	.p4{ background: rgb(122, 122, 255); }
+
+	.demo-link-adv{ width: 100%; text-align: center; font-size: 22px;
+	position: fixed; bottom: 30px; color: rgba(255, 255, 255, 0.9); z-index: 2; }
+	.demo-link-adv a{ margin: 10px; }
+
+	.r-nav{ position: fixed; z-index: 2; right: 20px; top: 50%; height: 100%; margin-top: -75px; }
+	.r-nav div{ width: 10px; height: 10px; border: #FFF solid 1px;border-radius: 50%; margin: 20px 20px 0; cursor: pointer; }
+	.r-nav .active{ background-color: #FFF; }
+
+	</style>
+
+</head>
+
+<body>
+
+<div id="content">
+	<div class="p1">
+		<div>第一屏</div>
+	</div>
+	<div class="p2">
+		<div>第二屏</div>
+	</div>
+	<div class="p3">
+		<div>第三屏</div>
+	</div>
+	<div class="p4">
+		<div>第四屏</div>
+	</div>
+</div>
+
+<div class="demo-link-adv">
+	<a href="index.html" target="_blank">demo-1</a>
+	<a href="demo-2.html" target="_blank">demo-2</a>
+	<a href="demo-3.html" target="_blank">demo-3</a>
+	<a href="demo-4.html" target="_blank">demo-4</a>
+	<a href="demo-5.html" target="_blank">demo-5</a>
+</div>
+
+<script type="text/javascript" src="src/lib/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="src/lib/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="src/petrus-slide.js"></script>
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+
+	$("#content").petrus_slide({
+		animStyle: 'default',
+		isAlignCenter: true
+	});
+})
+
+</script>
+
+</body></html>
