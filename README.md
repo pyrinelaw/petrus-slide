@@ -47,12 +47,9 @@ getAllow();
 ```
 
 ### github
-[完整代码下载: https://github.com/pyrinelaw/pFastCorres]
-[示例: https://github.com/pyrinelaw/pFastCorres]
+[完整代码下载: https://github.com/pyrinelaw/petrus-slide]
 
-###其他
-
-[插件支持:jquery.mousewheel.js](http://plugins.jquery.com/mousewheel/)
+[示例: https://github.com/pyrinelaw/petrus-slide]
 
 
 ------
